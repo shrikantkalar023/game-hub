@@ -11,6 +11,7 @@ interface Props {
 
 const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, isLoading } = useGames(gameQuery);
+  // const { data, error, isLoading } = useInfiniteGames(gameQuery);
   const skeleton = [1, 2, 3, 4, 5, 6];
 
   if (error) return <Text>{error.message}</Text>;
@@ -27,7 +28,7 @@ const GameGrid = ({ gameQuery }: Props) => {
             <GameCardSkeleton />
           </GameCardContainer>
         ))}
-      {data?.map((g) => (
+      {data?.results.map((g) => (
         <GameCardContainer key={g.id}>
           <GameCard game={g} />
         </GameCardContainer>
