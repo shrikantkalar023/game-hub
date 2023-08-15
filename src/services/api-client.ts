@@ -28,10 +28,3 @@ class APIClient<T> {
 }
 
 export default APIClient;
-
-// simply exporting a fn which does the job.
-// export const axiosFnFetch = <T>(url: string, config?: AxiosRequestConfig) => {
-//   return axiosInstance
-//     .get<FetchResponse<T>>(url, config)
-//     .then((res) => res.data.results);
-// };
