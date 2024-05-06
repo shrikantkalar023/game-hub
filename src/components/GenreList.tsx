@@ -16,7 +16,6 @@ const GenreList = () => {
   const selectedGenreId = useGameQueryStore((s) => s.gameQuery.genreId);
   const setSelectedGenreId = useGameQueryStore((s) => s.setGenreId);
 
-  // TODO: replace spinner with skeletons.
   if (isLoading) return <Spinner />;
   if (error) return null;
   return (
