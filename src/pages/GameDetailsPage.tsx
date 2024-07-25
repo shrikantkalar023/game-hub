@@ -6,7 +6,7 @@ import GameScreenshots from "../components/GameScreenshots";
 import GameTrailer from "../components/GameTrailer";
 import useGame from "../hooks/useGame";
 
-const GameDetailPage = () => {
+const GameDetailsPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const { data: game, isLoading, error } = useGame(slug!);
 
@@ -30,4 +30,4 @@ const GameDetailPage = () => {
   );
 };
 
-export default GameDetailPage;
+export default GameDetailsPage;
